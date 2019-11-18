@@ -3,8 +3,8 @@ import re
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 import time
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
+# import matplotlib.pyplot as plt
+# import matplotlib.image as mpimg
 import cv2
 from PIL import Image
 import math
@@ -60,7 +60,7 @@ def write_to_file(array, new_width):
 @click.option('--block_size', '--b', default=7, help='Size of the blocksize, default of 7')
 @click.option('--input_file', '--i', help='File to select, if none selected will prompt for file')
 @click.option('--output_file', '--o', default="finished.png", help='Name of output file, defaults to finished.png')
-@click.option('--show_info', '--s', is_flag=True, default=False, help='Flag to see if info will be shown, default to flase')
+@click.option('--show_info', '--s', is_flag=True, default=False, help='Flag to show build information and file of dice to rebuild yourself, default to flase')
 
 def convert_image(block_size, input_file, output_file, show_info):
     if input_file:
